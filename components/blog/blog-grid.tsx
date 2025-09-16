@@ -4,7 +4,7 @@ const blogPosts = [
   {
     id: "star-method",
     title: "5 Tình Huống Đi Làm Mà Bạn Không Thể Thiếu Tiếng Anh",
-    image: "/images/blog/star-method.webp",
+    image: "/images/blog/Bai-1.webp",
     date: "2024-12-15",
     category: "Phỏng vấn",
     readTime: "5 phút đọc",
@@ -12,7 +12,7 @@ const blogPosts = [
   {
     id: "experience-storytelling",
     title: "Não Bộ Và Cách Chúng Ta Ghi Nhớ Ngôn Ngữ",
-    image: "/images/blog/experience-storytelling.webp",
+    image: "/images/blog/bai-2.webp",
     date: "2024-12-12",
     category: "Kỹ năng giao tiếp",
     readTime: "6 phút đọc",
@@ -20,7 +20,7 @@ const blogPosts = [
   {
     id: "tell-me-about-yourself",
     title: "Bí Mật “Kích Hoạt Toàn Bộ Não Bộ” Khi Học Ngoại Ngữ",
-    image: "/images/blog/tell-me-about-yourself.webp",
+    image: "/images/blog/bai-3.webp",
     date: "2024-12-10",
     category: "Phỏng vấn",
     readTime: "7 phút đọc",

@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, Clock, Tag } from "lucide-react"
 
 interface BlogPost {
   id: string
@@ -18,24 +17,23 @@ interface BlogCardProps {
 export function BlogCard({ post }: BlogCardProps) {
   return (
     <article className="bg-gradient-to-br from-[#000072] to-[#b9c7e8] rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
-      <div className="relative h-48 overflow-hidden">
+      {/* Ảnh cố định 300x300 */}
+      <div className="flex justify-center items-center bg-gray-100">
         <Image
           src={post.image || "/placeholder.svg"}
           alt={post.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          width={300}
+          height={300}
+          className="object-cover w-[300px] h-[300px] group-hover:scale-105 transition-transform duration-300"
         />
-
       </div>
 
       <div className="p-6">
-
         <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-yellow-200 transition-colors">
           <Link href={`/blog/${post.id}`} className="text-balance">
             {post.title}
           </Link>
         </h3>
-
 
         <Link
           href={`/blog/${post.id}`}

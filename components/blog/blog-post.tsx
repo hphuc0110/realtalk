@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Calendar, Clock, Tag, ArrowLeft, Share2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -18,31 +17,36 @@ export function BlogPost({ post }: BlogPostProps) {
   return (
     <article className="bg-white">
       {/* Hero Section */}
-      <div className="relative h-[400px] md:h-[500px] overflow-hidden">
-        <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-12">
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-4 text-white/80 text-sm mb-4">
-                <div className="flex items-center gap-1">
-                  <Tag className="w-4 h-4" />
-                  {post.category}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  {new Date(post.date).toLocaleDateString("vi-VN")}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {post.readTime}
-                </div>
-              </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white text-balance leading-tight">{post.title}</h1>
+      <section className="relative bg-gradient-to-r from-[#000072] via-[#2c3e91] to-[#b9c7e8] text-white py-20 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+          {/* Meta info */}
+          <div className="flex flex-wrap items-center gap-4 text-blue-100/90 text-sm mb-6">
+            <div className="flex items-center gap-1">
+              <Tag className="w-4 h-4" />
+              {post.category}
+            </div>
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              {new Date(post.date).toLocaleDateString("vi-VN")}
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              {post.readTime}
             </div>
           </div>
+
+          {/* Title */}
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
+            {post.title}
+          </h1>
         </div>
-      </div>
+
+        {/* Hiệu ứng nền mờ */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-10 -left-10 w-72 h-72 bg-yellow-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        </div>
+      </section>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-12">
