@@ -71,27 +71,6 @@ export function BlogSidebar() {
           ))}
         </div>
       </div>
-
-      {/* Categories */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <div className="flex items-center gap-2 mb-6">
-          <Users className="w-5 h-5 text-blue-600" />
-          <h3 className="text-lg font-bold text-gray-900">Chủ đề</h3>
-        </div>
-
-        <div className="space-y-3">
-          {categories.map((category) => (
-            <Link
-              key={category.name}
-              href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, "-")}`}
-              className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors group"
-            >
-              <span className="text-gray-700 group-hover:text-blue-600 transition-colors">{category.name}</span>
-              <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{category.count}</span>
-            </Link>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }

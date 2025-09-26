@@ -3,26 +3,18 @@ export function TrainingMethodsSection() {
     {
       title: "Người đi làm",
       image: "/images/training/phan-bien.webp",
-      description:
-        "Không học vẹt, mà học cách phân tích nhà tuyển dụng và đưa ra câu trả lời chiến lược bằng vốn từ chuyên nghiệp.",
     },
     {
       title: "Nhân sự văn phòng",
       image: "/images/training/nghe-thuat-ke-chuyen.webp",
-      description:
-        "Biến kinh nghiệm thành câu chuyện hấp dẫn, sử dụng framework chuẩn quốc tế (STAR, PAR...) và tiếng Anh tự nhiên, có cảm xúc.",
     },
     {
       title: "Quản lý",
       image: "/images/training/ban-linh.webp",
-      description:
-        "Tự tin đến từ thực hành: luyện phản xạ luyện mock interview luyện tình huống áp lực cao để biến tiếng Anh thành lợi thế.",
     },
     {
       title: "Freelancer",
       image: "/images/training/education-2.webp",
-      description:
-        "Tự tin đến từ thực hành: luyện phản xạ luyện mock interview luyện tình huống áp lực cao để biến tiếng Anh thành lợi thế.",
     },
   ]
 
