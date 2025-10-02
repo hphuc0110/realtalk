@@ -7,10 +7,9 @@ export function MethodologySection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const steps = [
-    { icon: RefreshCw, label: "Tính gọn", content: "Thiết kế theo vị trí và mục tiêu ứng tuyển" },
-    { icon: User, label: "Thực chiến", content: "Luyện tập 100% trên lớp theo framework" },
-    { icon: Users, label: "Cá nhân hóa", content: "Mô phỏng phỏng vấn thật với giảng viên" },
-    { icon: Shield, label: "Uy tín", content: "Học để áp dụng linh hoạt lâu dài" },
+    { icon: RefreshCw, label: "Activation", content: " Activation (Kích hoạt), không học lại từ đầu: Chương trình được thiết kế để kích hoạt vốn tiếng Anh Học viên đã có nhưng chưa thật sự ứng dụng được vào các tình huống, giúp Học viên giao tiếp được ngay từ những buổi đầu thay vì học lại ngữ pháp khô khan." },
+    { icon: User, label: "Customization", content: "Customization (Cá nhân hóa): Không giáo trình rập khuôn, HV sẽ được lựa chọn lộ trình phù hợp với bản thân và các kỹ năng ngôn ngữ cụ thể để tạo ra một chương trình học được thiết kế riêng cho chính mục tiêu của mình." },
+    { icon: Shield, label: "Blended Learning", content: "Blended Learning (Hệ thống học tập toàn diện): Hệ sinh thái học tập kết hợp với AI để đảm bảo hiệu quả tối đa dù lên trong hay ngoài giờ học" },
   ]
 
   return (
@@ -36,7 +35,7 @@ export function MethodologySection() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Icon */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-[#4f7de8] to-[#264ca3] flex items-center justify-center mb-3 shadow-md transition-transform duration-300 hover:scale-110">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#3464c5] flex items-center justify-center mb-3 shadow-md transition-transform duration-300 hover:scale-110">
                 <step.icon className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
               </div>
 

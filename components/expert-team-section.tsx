@@ -131,7 +131,9 @@ export default function ExpertTeamSection() {
     <section id="instructors" className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3264c3] mb-4">Đội ngũ giảng viên & chuyên gia</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3264c3] mb-4">Đội ngũ giảng viên </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3264c3] mb-4">&</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3264c3] mb-4">chuyên gia</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Đội ngũ giảng viên & chuyên gia HLE với nhiều năm kinh nghiệm giảng dạy, kết hợp phương pháp học tập thực
             dụng và cá nhân hóa 1-1, giúp học viên tháo gỡ những khó khăn của riêng mình và tiến bộ rõ rệt trong quá

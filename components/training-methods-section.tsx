@@ -3,14 +3,17 @@ export function TrainingMethodsSection() {
     {
       title: "Người đi làm",
       image: "/images/training/phan-bien.webp",
+      description: "Toàn bộ luyện tập diễn ra ngay trên lớp, có giảng viên phản hồi tức thì.",
     },
     {
       title: "Nhân sự văn phòng",
       image: "/images/training/nghe-thuat-ke-chuyen.webp",
+      description: "90% thời lượng là thực hành nói",
     },
     {
       title: "Quản lý",
       image: "/images/training/ban-linh.webp",
+      description: "Nghe trong tình huống công việc thật.",
     },
     {
       title: "Freelancer",
@@ -25,18 +28,25 @@ export function TrainingMethodsSection() {
         <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white/5 animate-pulse"></div>
         <div
           className="absolute bottom-20 right-20 w-32 h-32 rounded-full bg-white/5 animate-bounce"
-          style={{ animationDuration: "4s" }}
+          style={{ animationDuration: "3s" }}
         ></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-2xl">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">Học viên của RealTalk là ai? </h2>
-            <div className="text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
-            </div>
-          </div>
-        </div>
+      <div className="container mx-auto px-4 sm:px-8 lg:px-8 relative z-10">
+      <div className="text-center mb-16">
+  <div className="inline-block bg-black/30 backdrop-blur-sm rounded-2xl p-8">
+    <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+      HỌC VIÊN TẠI REALTALK 
+    </h2>
+    <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+      KHÔNG CẦN LÀM BÀI TẬP VỀ NHÀ
+    </h2>
+    <div className="text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
+      {/* nội dung phụ nếu có */}
+    </div>
+  </div>
+</div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {methods.map((method, index) => (
@@ -56,7 +66,7 @@ export function TrainingMethodsSection() {
 
                   {/* Tiêu đề luôn hiển thị dưới cùng */}
                   <div className="absolute bottom-6 left-6 right-6 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <h3 className="text-white font-semibold text-lg leading-tight drop-shadow-lg">{method.title}</h3>
+                    <h3 className="text-white font-semibold italic text-lg leading-tight drop-shadow-lg">{method.title}</h3>
                   </div>
                 </div>
               </div>
@@ -64,8 +74,8 @@ export function TrainingMethodsSection() {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-center text-white/90 text-lg">
-        <strong>Hay bất kỳ ai cần tiếng Anh để giao tiếp hiệu quả, phục vụ công việc và cuộc sống.</strong>
+        <p className="mt-10 text-center italic text-white/90 text-lg">
+        <strong>Bài tập không mang về, vì đã luyện đủ và đúng ngay tại lớp.</strong>
 </p>
       </div>
     </section>

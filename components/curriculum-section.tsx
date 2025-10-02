@@ -6,32 +6,31 @@ export function CurriculumSection() {
   const modules = [
     {
       number: 1,
-      title: "Tiếng Anh giao tiếp hàng ngày ",
-      subtitle: "General Communication Skills – GCS",
+      title: "Introduction",
+      subtitle: "1 BUỔI",
       color: "bg-gray-600",
-      details: `- Khóa học trang bị cho học viên vốn ngôn ngữ và kỹ năng thiết yếu để tự tin trong mọi tình huống đời sống thường nhật. 
-- Làm quen, duy trì trò chuyện ngắn small talk, giới thiệu bản thân và người khác một cách tự nhiên. 
-- Miêu tả con người, địa điểm, đồ vật và hoạt động thường ngày một cách sinh động. 
-- Tự tin kể lại trải nghiệm, sự kiện đã qua hoặc kế hoạch trong tương lai. 
-- Diễn đạt ý kiến, sở thích, thể hiện sự đồng tình/không đồng tình một cách lịch thiệp. 
-- Sử dụng ngôn ngữ chức năng để đưa ra yêu cầu, lời mời, lời khuyên, chỉ đường hiệu quả. 
-- Vận dụng chiến lược giao tiếp như làm rõ, xác nhận lại thông tin hoặc ngắt lời một cách tinh tế. 
-👉 Kết quả đạt được: Học viên có thể giao tiếp tự nhiên, xây dựng kết nối và mở rộng mối quan hệ trong cả công việc lẫn cuộc sống hàng ngày.`,
+      details: `Xác lập mục tiêu, phương pháp học, chuẩn hóa phát âm`,
     },
     {
       number: 2,
-      title: "Tiếng Anh công việc ",
-      subtitle: "Business English Skills – BES",
+      title: "Core Foundation",
+      subtitle: "14 BUỔI",
       color: "bg-gray-600",
-      details: `Khóa học tập trung phát triển khả năng giao tiếp chuyên nghiệp, giúp học viên làm việc hiệu quả trong môi trường công sở và quốc tế:
-- Tạo dựng mối quan hệ chuyên nghiệp, làm small talk và tự giới thiệu vai trò trong công ty.
-- Trình bày sản phẩm, dịch vụ hoặc mô tả quy trình/cơ cấu công ty với khách hàng và đối tác.
-- Báo cáo tiến độ, tóm lược dự án và định hướng bước tiếp theo một cách súc tích.
-- Đóng góp ý kiến, đưa ra đề xuất, phản hồi hoặc tranh luận trong cuộc họp một cách xây dựng.
-- Viết email và thực hiện cuộc gọi công việc (sắp xếp lịch hẹn, xác nhận, giao phó nhiệm vụ) chuyên nghiệp và chuẩn mực.
-- Làm rõ điều khoản, tổng hợp ý chính, dẫn dắt thảo luận và tham gia đàm phán cơ bản.
-- Giải quyết các tình huống công sở như phàn nàn từ khách hàng, sự cố kỹ thuật, hay chậm tiến độ.
-👉 Kết quả đạt được: Học viên sẽ sử dụng tiếng Anh một cách tự tin, chuẩn mực và thuyết phục trong môi trường làm việc, từ đó nâng cao hiệu quả công việc và giá trị nghề nghiệp.`,
+      details: `Xây dựng nền tảng giao tiếp cốt lõi `,
+    },
+    {
+      number: 3,
+      title: "Situational Application",
+      subtitle: "28 BUỔI",
+      color: "bg-gray-600",
+      details: `Ứng dụng vào tình huống thực tế theo track đã chọn `,
+    },
+    {
+      number: 4,
+      title: "Final Assessment",
+      subtitle: "2 BUỔI",
+      color: "bg-gray-600",
+      details: `Luyện tập tổng hợp và đánh giá cuối khóa `,
     },
   ]
 
