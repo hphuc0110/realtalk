@@ -24,6 +24,7 @@ export function TrainingMethodsSection() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-[#3264C3] to-[#2850A0] relative overflow-hidden">
+      {/* background animation */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white/5 animate-pulse"></div>
         <div
@@ -35,21 +36,28 @@ export function TrainingMethodsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-2xl">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">TRIẾT LÝ ĐÀO TẠO</h2>
-            <div className="text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
-            <span className="text-white">&</span>{" "}
-            </div>
-            <h3 className="text-3xl lg:text-4xl font-Gilroy italic text-white mt-2 drop-shadow-lg">
-              sẵn sàng cho mọi biến lớn
-            </h3>
+            <h2 className="text-4xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+              HỌC VIÊN TẠI REALTALK KHÔNG CẦN LÀM BÀI TẬP VỀ NHÀ
+            </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* grid video cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {methods.map((method, index) => (
-            <VideoCard key={index} title={method.title} video={method.video} onClick={() => setSelectedVideo(method)} />
+            <VideoCard
+              key={index}
+              title={method.title}
+              video={method.video}
+              onClick={() => setSelectedVideo(method)}
+            />
           ))}
         </div>
+
+        {/* text dưới cùng */}
+        <p className="text-center text-white/90 text-lg font-medium italic drop-shadow-md">
+          Bài tập không mang về, vì đã luyện đủ và đúng ngay tại lớp.
+        </p>
       </div>
 
       <VideoModal
@@ -84,7 +92,9 @@ function VideoCard({
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
-            <h3 className="text-white font-semibold text-lg leading-tight drop-shadow-lg">{title}</h3>
+            <h3 className="text-white font-semibold text-lg leading-tight drop-shadow-lg">
+              {title}
+            </h3>
           </div>
         </div>
       </div>
