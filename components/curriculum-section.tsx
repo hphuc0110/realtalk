@@ -46,7 +46,7 @@ export function CurriculumSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-[#000072] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            Lộ trình 5+1
+            Lộ trình 45 buổi
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             BẠN SẼ NHẬN ĐƯỢC HƠN CẢ MỘT{" "}

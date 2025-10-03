@@ -1,22 +1,18 @@
 export function TrainingMethodsSection() {
   const methods = [
     {
-      title: "Người đi làm",
       image: "/images/training/phan-bien.webp",
       description: "Toàn bộ luyện tập diễn ra ngay trên lớp, có giảng viên phản hồi tức thì.",
     },
     {
-      title: "Nhân sự văn phòng",
       image: "/images/training/nghe-thuat-ke-chuyen.webp",
       description: "90% thời lượng là thực hành nói",
     },
     {
-      title: "Quản lý",
       image: "/images/training/ban-linh.webp",
       description: "Nghe trong tình huống công việc thật.",
     },
     {
-      title: "Freelancer",
       image: "/images/training/education-2.webp",
     },
   ]
@@ -55,7 +51,6 @@ export function TrainingMethodsSection() {
                 <div className="aspect-[4/5] relative">
                   <img
                     src={method.image || "/placeholder.svg"}
-                    alt={method.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
@@ -66,7 +61,6 @@ export function TrainingMethodsSection() {
 
                   {/* Tiêu đề luôn hiển thị dưới cùng */}
                   <div className="absolute bottom-6 left-6 right-6 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <h3 className="text-white font-semibold italic text-lg leading-tight drop-shadow-lg">{method.title}</h3>
                   </div>
                 </div>
               </div>
