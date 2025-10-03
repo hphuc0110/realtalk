@@ -77,7 +77,7 @@ export function HeroSection() {
             <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-500 order-1 lg:order-2">
               <div className="relative z-10 group">
                 <img
-                  src="/images/hero-new.png"
+                  src="/images/hero-section.webp"
                   alt="RealTalk English Learning"
                   className="w-full h-auto max-w-xs sm:max-w-sm lg:max-w-md mx-auto transition-transform duration-500 group-hover:scale-105"
                 />
