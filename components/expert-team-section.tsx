@@ -12,7 +12,7 @@ const experts = [
     experience: "15+ năm kinh nghiệm quốc tế",
     description:
       "Chuyên gia hàng đầu trong lĩnh vực đào tạo tiếng Anh với kinh nghiệm làm việc tại các tập đoàn đa quốc gia.",
-    image: "/images/teachers/James.webp",
+    image: "/images/teachers/james.webp",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const experts = [
     specialization: "International Communication & Cross-cultural Training",
     experience: "12+ năm kinh nghiệm",
     description: "Chuyên gia giao tiếp quốc tế với chuyên môn sâu về văn hóa doanh nghiệp và kỹ năng thuyết trình.",
-    image: "/images/teachers/Sandra.webp",
+    image: "/images/teachers/sandra.webp",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const experts = [
     experience: "10+ năm kinh nghiệm",
     description:
       "Chuyên gia marketing số và tiếng Anh thương mại hiện đại, giúp doanh nghiệp thích ứng với thời đại 4.0.",
-    image: "/images/teachers/Julian.webp",
+    image: "/images/teachers/julian.webp",
   },
 ]
 
@@ -157,7 +157,7 @@ export default function ExpertTeamSection() {
     <section id="instructors" className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-lg md:text-4xl font-bold text-[#cd0000] mb-4">Đội ngũ Giảng viên & Chuyên gia</h2>
+          <h2 className="text-lg md:text-4xl font-bold text-[#191980] mb-4">Đội ngũ Giảng viên & Chuyên gia</h2>
           <p className="text-md text-gray-600 text-justify max-w-3xl mx-auto">
             Đội ngũ Giảng viên & Chuyên gia HLE với nhiều năm kinh nghiệm giảng dạy, kết hợp phương pháp học tập thực
             dụng và cá nhân hóa 1-1, giúp học viên tháo gỡ khó khăn của riêng mình và tiến bộ rõ rệt trong quá
@@ -170,7 +170,7 @@ export default function ExpertTeamSection() {
           <div className="bg-white rounded-2xl p-6 md:p-12 shadow-2xl">
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-                Đội ngũ <span className="text-[#cd0000]">chuyên gia</span>
+                Đội ngũ <span className="text-[#191980]">chuyên gia</span>
               </h3>
             </div>
             <div className="relative">
@@ -178,7 +178,7 @@ export default function ExpertTeamSection() {
                 {experts.map((expert) => (
                   <div
                     key={expert.id}
-                    className="bg-gradient-to-br from-red-100 to-red-200 rounded-xl p-6 hover:scale-105 transition-transform duration-300 flex-shrink-0 w-80 md:w-auto"
+                    className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6 hover:scale-105 transition-transform duration-300 flex-shrink-0 w-80 md:w-auto"
                   >
                     <div className="aspect-[3/4] overflow-hidden rounded-lg mb-4 mx-auto max-w-[300px]">
                       <img
@@ -189,7 +189,7 @@ export default function ExpertTeamSection() {
                       />
                     </div>
                     <div className="text-center">
-                      <p className="text-[#cf0001] text-sm font-medium mb-1">{expert.title}</p>
+                      <p className="text-[#191980] text-sm font-medium mb-1">{expert.title}</p>
                       <h4 className="font-bold text-xl text-black mb-2">{expert.name}</h4>
                       <p className="text-gray-700 text-sm mb-3">{expert.specialization}</p>
                       <p className="text-gray-500 text-xs mb-4">{expert.experience}</p>
@@ -212,7 +212,7 @@ export default function ExpertTeamSection() {
         <div className="bg-white rounded-2xl p-6 md:p-12 shadow-2xl relative">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-              Đội ngũ <span className="text-[#cd0000]">giáo viên</span>
+              Đội ngũ <span className="text-[#191980]">giáo viên</span>
             </h3>
           </div>
 
