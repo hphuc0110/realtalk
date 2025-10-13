@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Play } from "lucide-react"
 import { VideoModal } from "./video-modal"
 
@@ -36,7 +36,7 @@ export function TrainingMethodsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-2xl">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+            <h2 className="text-3xl lg:text-3xl font-bold text-[#fdc700] mb-4 drop-shadow-lg">
               HỌC VIÊN TẠI REALTALK KHÔNG CẦN LÀM BÀI TẬP VỀ NHÀ
             </h2>
           </div>
@@ -54,7 +54,6 @@ export function TrainingMethodsSection() {
           ))}
         </div>
 
-        {/* text dưới cùng */}
         <p className="text-center text-yellow-400 text-lg font-medium italic drop-shadow-md">
           Không cần làm bài tập về nhà
         </p>
@@ -79,18 +78,75 @@ function VideoCard({
   video: string
   onClick: () => void
 }) {
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const [thumbnail, setThumbnail] = useState<string | null>(null)
+
+  useEffect(() => {
+    const generateThumbnail = async () => {
+      const vid = document.createElement("video")
+      vid.src = video
+      vid.crossOrigin = "anonymous"
+      vid.muted = true
+
+      await new Promise<void>((resolve, reject) => {
+        vid.addEventListener("loadedmetadata", () => resolve())
+        vid.addEventListener("error", reject)
+      })
+
+      // Seek đến giữa video
+      await new Promise<void>((resolve) => {
+        vid.currentTime = vid.duration / 2
+        vid.addEventListener("seeked", () => resolve(), { once: true })
+      })
+
+      const canvas = document.createElement("canvas")
+      canvas.width = vid.videoWidth
+      canvas.height = vid.videoHeight
+      const ctx = canvas.getContext("2d")
+      if (!ctx) return
+
+      ctx.drawImage(vid, 0, 0, canvas.width, canvas.height)
+      const imageUrl = canvas.toDataURL("image/jpeg")
+      setThumbnail(imageUrl)
+    }
+
+    generateThumbnail().catch(console.error)
+  }, [video])
+
   return (
     <div className="group cursor-pointer" onClick={onClick}>
       <div className="relative overflow-hidden rounded-2xl bg-white/20 backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/10">
         <div className="aspect-[4/5] relative">
-          <video src={video} className="w-full h-full object-cover" playsInline muted />
+          {/* Mobile: hiển thị thumbnail tự cắt */}
+          {thumbnail ? (
+            <img
+              src={thumbnail}
+              alt={title}
+              className="block md:hidden w-full h-full object-cover"
+            />
+          ) : (
+            <div className="block md:hidden w-full h-full bg-gray-300 animate-pulse"></div>
+          )}
 
+          {/* Desktop: hiển thị video */}
+          <video
+            ref={videoRef}
+            src={video}
+            className="hidden md:block w-full h-full object-cover"
+            playsInline
+            muted
+            loop
+            autoPlay
+          />
+
+          {/* Overlay nút play */}
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
             <div className="w-16 h-16 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg">
               <Play className="w-8 h-8 text-[#3264C3] ml-1" fill="currentColor" />
             </div>
           </div>
 
+          {/* Tiêu đề */}
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
             <h3 className="text-white font-semibold text-lg leading-tight drop-shadow-lg">
               {title}

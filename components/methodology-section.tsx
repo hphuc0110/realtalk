@@ -1,16 +1,37 @@
 "use client"
 
 import { useState } from "react"
-import { RefreshCw, User, Users, Shield } from "lucide-react"
+import { RefreshCw, User, Shield } from "lucide-react"
 
 export function MethodologySection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null) // 👈 thêm state cho mobile
 
   const steps = [
-    { icon: RefreshCw, label: "Activation", content: " Activation (Kích hoạt), không học lại từ đầu: Chương trình được thiết kế để kích hoạt vốn tiếng Anh Học viên đã có nhưng chưa thật sự ứng dụng được vào các tình huống, giúp Học viên giao tiếp được ngay từ những buổi đầu thay vì học lại ngữ pháp khô khan." },
-    { icon: User, label: "Customization", content: "Customization (Cá nhân hóa): Không giáo trình rập khuôn, HV sẽ được lựa chọn lộ trình phù hợp với bản thân và các kỹ năng ngôn ngữ cụ thể để tạo ra một chương trình học được thiết kế riêng cho chính mục tiêu của mình." },
-    { icon: Shield, label: "Blended Learning", content: "Blended Learning (Hệ thống học tập toàn diện): Hệ sinh thái học tập kết hợp với AI để đảm bảo hiệu quả tối đa dù lên trong hay ngoài giờ học" },
+    {
+      icon: RefreshCw,
+      label: "Activation",
+      content:
+        "Activation (Kích hoạt): Chương trình kích hoạt vốn tiếng Anh sẵn có, giúp học viên giao tiếp được ngay từ những buổi đầu thay vì học lại ngữ pháp khô khan.",
+    },
+    {
+      icon: User,
+      label: "Customization",
+      content:
+        "Customization (Cá nhân hóa): Học viên được lựa chọn lộ trình phù hợp, tập trung vào kỹ năng và mục tiêu riêng của bản thân.",
+    },
+    {
+      icon: Shield,
+      label: "Blended Learning",
+      content:
+        "Blended Learning (Học tập toàn diện): Kết hợp lớp học thực tế và hệ thống AI để đảm bảo hiệu quả tối đa dù học online hay offline.",
+    },
   ]
+
+  const handleIconClick = (index: number) => {
+    // Nếu click lại cùng icon -> ẩn đi
+    setActiveIndex(activeIndex === index ? null : index)
+  }
 
   return (
     <section className="py-16 bg-gradient-to-b from-[#dbe4f9] to-[#b9c7e8]">
@@ -35,7 +56,10 @@ export function MethodologySection() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Icon */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#3464c5] flex items-center justify-center mb-3 shadow-md transition-transform duration-300 hover:scale-110">
+              <div
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#3464c5] flex items-center justify-center mb-3 shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer"
+                onClick={() => handleIconClick(index)}
+              >
                 <step.icon className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
               </div>
 
@@ -44,10 +68,14 @@ export function MethodologySection() {
                 {step.label}
               </span>
 
-              {/* Nội dung luôn hiển thị trên mobile, tooltip hover trên desktop */}
-              <div className="block lg:hidden mt-2 text-xs sm:text-sm text-black/70">
-                {step.content}
-              </div>
+              {/* Nội dung hiển thị khi click trên mobile */}
+              {activeIndex === index && (
+                <div className="block lg:hidden mt-2 text-xs sm:text-sm text-black/70 animate-fadeInUp">
+                  {step.content}
+                </div>
+              )}
+
+              {/* Tooltip hover cho desktop */}
               {hoveredIndex === index && (
                 <div className="hidden lg:block absolute top-full mt-5 w-60 bg-white text-black text-sm p-4 rounded-xl shadow-lg z-10 animate-fadeInUp">
                   {step.content}

@@ -24,8 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable} antialiased`}>
-        <div className="max-w-7x1 mx-auto px-10">
+      <body className={`font-sans ${inter.variable} antialiased bg-white text-gray-900`}>
+        <div
+          className="
+            mx-auto 
+            w-full 
+            max-w-7xl 
+            px-4 
+            sm:px-6 
+            lg:px-10 
+          "
+        >
           <Suspense fallback={null}>{children}</Suspense>
         </div>
         <Analytics />
