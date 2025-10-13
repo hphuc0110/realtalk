@@ -36,7 +36,7 @@ export function TrainingMethodsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-2xl">
-            <h2 className="text-4xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 drop-shadow-lg">
               HỌC VIÊN TẠI REALTALK KHÔNG CẦN LÀM BÀI TẬP VỀ NHÀ
             </h2>
           </div>
@@ -55,8 +55,8 @@ export function TrainingMethodsSection() {
         </div>
 
         {/* text dưới cùng */}
-        <p className="text-center text-white/90 text-lg font-medium italic drop-shadow-md">
-          Bài tập không mang về, vì đã luyện đủ và đúng ngay tại lớp.
+        <p className="text-center text-yellow-400 text-lg font-medium italic drop-shadow-md">
+          Không cần làm bài tập về nhà
         </p>
       </div>
 
