@@ -25,6 +25,30 @@ const blogPosts = [
     category: "Phỏng vấn",
     readTime: "7 phút đọc",
   },
+  {
+    id: "tinh-huong-thuc-te",
+    title: "Học tiếng Anh qua tình huống thực tế: Phương pháp giúp bạn nhớ lâu và nói tự nhiên",
+    image: "/images/blog/",
+    date: "2024-10-12",
+    category: "Phỏng vấn",
+    readTime: "5 phút đọc",
+  },
+  {
+    id: "5-thoi-quen",
+    title: "5 thói quen nhỏ giúp bạn giỏi tiếng Anh hơn mỗi ngày mà không cần học quá nhiều",
+    image: "/images/blog/",
+    date: "2024-09-02",
+    category: "Phỏng vấn",
+    readTime: "6 phút đọc",
+  },
+  {
+    id: "bi-quyet-noi",
+    title: "Storytelling – Bí quyết khiến bài nói tiếng Anh trở nên đáng nhớ",
+    image: "/images/blog/",
+    date: "2024-09-02",
+    category: "Phỏng vấn",
+    readTime: "6 phút đọc",
+  },
 ]
 
 export function BlogGrid() {
