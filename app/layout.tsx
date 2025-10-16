@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "GoTalk - Học Tiếng Anh Hiệu Quả",
+  title: "RealTalk - Học Tiếng Anh Hiệu Quả",
   description:
     "Trung tâm tiếng Anh RealTalk - Phương pháp học tiếng Anh giao tiếp thực tế, giúp bạn tự tin nói tiếng Anh trong mọi tình huống",
   generator: "RealTalk Education Platform",
