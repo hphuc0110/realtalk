@@ -61,10 +61,10 @@ function Footer() {
 
             {/* Social Media */}
             <div className="flex gap-4 mt-6">
-              {[Facebook, MessageCircle, Youtube, MessageCircle].map((Icon, i) => (
+              {[Facebook].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.facebook.com/realtalk.english.vn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#000072] p-3 rounded-full text-white hover:bg-[#b50001] transition-colors"
@@ -136,7 +136,7 @@ function Footer() {
             <div className="text-center md:text-right">
               <p className="text-sm font-semibold text-[#000072] mb-1">Part of our network</p>
               <a
-                href="https://hle.edu.vn"
+                href="https://www.honglinheducation.vn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-[#000072] hover:underline"

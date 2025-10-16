@@ -170,7 +170,7 @@ export default function ExpertTeamSection() {
           <div className="bg-white rounded-2xl p-6 md:p-12 shadow-2xl">
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-                Đội ngũ <span className="text-[#191980]">chuyên gia</span>
+                Đội ngũ <span className="text-[#191980]">Chuyên gia</span>
               </h3>
             </div>
             <div className="relative">
@@ -201,7 +201,7 @@ export default function ExpertTeamSection() {
               <div className="flex items-center justify-center mt-4 md:hidden">
                 <div className="flex items-center gap-2 bg-red-50 px-4 py-2 rounded-full text-sm text-gray-600">
                   <Swipe className="w-4 h-4" />
-                  <span>Lướt ngang để xem thêm chuyên gia</span>
+                  <span>Lướt ngang để xem thêm Chuyên gia</span>
                 </div>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function ExpertTeamSection() {
         <div className="bg-white rounded-2xl p-6 md:p-12 shadow-2xl relative">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-              Đội ngũ <span className="text-[#191980]">giáo viên</span>
+              Đội ngũ <span className="text-[#191980]">Giáo viên</span>
             </h3>
           </div>
 
@@ -263,7 +263,7 @@ export default function ExpertTeamSection() {
           <div className="flex items-center justify-center mt-6">
             <div className="flex items-center gap-2 bg-gradient-to-r from-red-50 to-purple-50 px-6 py-3 rounded-full text-sm text-gray-600 shadow-sm">
               <Swipe className="w-4 h-4 text-red-500" />
-              <span className="font-medium">Lướt ngang để khám phá thêm giáo viên</span>
+              <span className="font-medium">Lướt ngang để khám phá thêm Giáo viên</span>
             </div>
           </div>
         </div>

@@ -17,14 +17,14 @@ interface BlogCardProps {
 export function BlogCard({ post }: BlogCardProps) {
   return (
     <article className="bg-gradient-to-br from-[#000072] to-[#b9c7e8] rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
-      {/* Ảnh cố định 300x300 */}
-      <div className="flex justify-center items-center bg-gray-100">
+      {/* Ảnh vuông responsive */}
+      <div className="relative aspect-square w-full bg-gray-100 overflow-hidden">
         <Image
           src={post.image || "/placeholder.svg"}
           alt={post.title}
-          width={300}
-          height={300}
-          className="object-cover w-[300px] h-[300px] group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
         />
       </div>
 

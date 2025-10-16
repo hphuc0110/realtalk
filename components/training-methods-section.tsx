@@ -7,15 +7,15 @@ import { VideoModal } from "./video-modal"
 export function TrainingMethodsSection() {
   const methods = [
     {
-      title: "Phản biện & giải quyết vấn đề",
+      title: "",
       video: "/videos/training/video-1.mp4",
     },
     {
-      title: "Nghệ thuật kể chuyện (Storytelling)",
+      title: "",
       video: "/videos/training/video-2.mp4",
     },
     {
-      title: "Bản lĩnh từ sự nhuần nhuyễn",
+      title: "",
       video: "/videos/training/video-3.mp4",
     },
   ]
@@ -36,8 +36,11 @@ export function TrainingMethodsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 mx-auto max-w-2xl">
+            <h2 className="text-3xl lg:text-3xl font-bold text-white mb-4 drop-shadow-lg">
+              HỌC VIÊN TẠI REALTALK 
+            </h2>
             <h2 className="text-3xl lg:text-3xl font-bold text-[#fdc700] mb-4 drop-shadow-lg">
-              HỌC VIÊN TẠI REALTALK KHÔNG CẦN LÀM BÀI TẬP VỀ NHÀ
+             KHÔNG CẦN LÀM BÀI TẬP VỀ NHÀ
             </h2>
           </div>
         </div>
@@ -55,7 +58,7 @@ export function TrainingMethodsSection() {
         </div>
 
         <p className="text-center text-yellow-400 text-lg font-medium italic drop-shadow-md">
-          Không cần làm bài tập về nhà
+          Vì đã được luyện tập ĐÚNG & ĐỦ ngay trên lớp
         </p>
       </div>
 

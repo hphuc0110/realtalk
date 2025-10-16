@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "RealTalk - Học Tiếng Anh Hiệu Quả",
+  title: "GoTalk - Học Tiếng Anh Hiệu Quả",
   description:
     "Trung tâm tiếng Anh RealTalk - Phương pháp học tiếng Anh giao tiếp thực tế, giúp bạn tự tin nói tiếng Anh trong mọi tình huống",
   generator: "RealTalk Education Platform",
@@ -24,19 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable} antialiased bg-white text-gray-900`}>
-        <div
-          className="
-            mx-auto 
-            w-full 
-            max-w-7xl 
-            px-4 
-            sm:px-6 
-            lg:px-10 
-          "
-        >
-          <Suspense fallback={null}>{children}</Suspense>
-        </div>
+      <body className={`font-sans ${inter.variable} antialiased`}>
+        <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
     </html>

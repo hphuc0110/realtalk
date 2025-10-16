@@ -28,7 +28,7 @@ const blogPosts = [
   {
     id: "tinh-huong-thuc-te",
     title: "Học tiếng Anh qua tình huống thực tế: Phương pháp giúp bạn nhớ lâu và nói tự nhiên",
-    image: "/images/blog/",
+    image: "/images/blog/1.png",
     date: "2024-10-12",
     category: "Phỏng vấn",
     readTime: "5 phút đọc",
@@ -36,7 +36,7 @@ const blogPosts = [
   {
     id: "5-thoi-quen",
     title: "5 thói quen nhỏ giúp bạn giỏi tiếng Anh hơn mỗi ngày mà không cần học quá nhiều",
-    image: "/images/blog/",
+    image: "/images/blog/2.png",
     date: "2024-09-02",
     category: "Phỏng vấn",
     readTime: "6 phút đọc",
@@ -44,7 +44,7 @@ const blogPosts = [
   {
     id: "bi-quyet-noi",
     title: "Storytelling – Bí quyết khiến bài nói tiếng Anh trở nên đáng nhớ",
-    image: "/images/blog/",
+    image: "/images/blog/3.png",
     date: "2024-09-02",
     category: "Phỏng vấn",
     readTime: "6 phút đọc",
@@ -59,12 +59,6 @@ export function BlogGrid() {
         <div className="flex flex-wrap gap-2">
           <button className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
             Tất cả
-          </button>
-          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
-            Phỏng vấn
-          </button>
-          <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
-            Kỹ năng giao tiếp
           </button>
         </div>
       </div>
