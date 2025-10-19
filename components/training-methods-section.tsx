@@ -23,7 +23,7 @@ export function TrainingMethodsSection() {
   const [selectedVideo, setSelectedVideo] = useState<{ video: string; title: string } | null>(null)
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#3264C3] to-[#2850A0] relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-[#191980] to-[#191980]/90 relative overflow-hidden">
       {/* background animation */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-white/5 animate-pulse"></div>

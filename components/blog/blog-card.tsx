@@ -16,7 +16,7 @@ interface BlogCardProps {
 
 export function BlogCard({ post }: BlogCardProps) {
   return (
-    <article className="bg-gradient-to-br from-[#000072] to-[#b9c7e8] rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
+    <article className="bg-gradient-to-br from-[#191980] to-[#191980]/80 rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
       {/* Ảnh vuông responsive */}
       <div className="relative aspect-square w-full bg-gray-100 overflow-hidden">
         <Image

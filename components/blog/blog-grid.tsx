@@ -57,7 +57,7 @@ export function BlogGrid() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Bài viết mới nhất</h2>
         <div className="flex flex-wrap gap-2">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
+          <button className="px-4 py-2 bg-[#191980] text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
             Tất cả
           </button>
         </div>

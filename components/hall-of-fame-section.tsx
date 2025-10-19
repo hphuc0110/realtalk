@@ -40,7 +40,7 @@ export function HallOfFameSection() {
         {/* Tiêu đề */}
         <h2
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 
-                     bg-gradient-to-r from-green-400 via-blue-500 to-red-500 
+                     bg-gradient-to-r from-[#191980] via-blue-700 to-[#191980]
                      bg-clip-text text-transparent drop-shadow-lg tracking-wide uppercase"
         >
           Hall of Fame
