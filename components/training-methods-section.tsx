@@ -57,7 +57,7 @@ export function TrainingMethodsSection() {
           ))}
         </div>
 
-        <p className="text-center text-yellow-400 text-lg font-medium italic drop-shadow-md">
+        <p className="text-center text-yellow-400 text-3xl font-medium italic drop-shadow-md">
           Vì đã được luyện tập ĐÚNG & ĐỦ ngay trên lớp
         </p>
       </div>

@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Phone, Mail, MapPin } from "lucide-react"
 
 export function ContactSection() {
@@ -17,13 +16,43 @@ export function ContactSection() {
     program: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here
-    alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.")
-    setFormData({ name: "", email: "", phone: "", program: "", message: "" })
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    // TODO: Thay YOUR_GOOGLE_APPS_SCRIPT_URL bằng URL từ Bước 2
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzrAI573Fku6D41ymRNtADY_GUEBRsECNsLG3qmGzcdQ-pGfWZv3CqKqZ3soa-4Ac8i/exec"
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "realtalk", // 👈 sheet tương ứng
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      })
+      
+
+      // With no-cors mode, we can't read the response, so we assume success
+      setSubmitStatus("success")
+      alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.")
+      setFormData({ name: "", email: "", phone: "", program: "", message: "" })
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      setSubmitStatus("error")
+      alert("Có lỗi xảy ra. Vui lòng thử lại sau.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -31,13 +60,12 @@ export function ContactSection() {
   }
 
   return (
- <section
-  className="py-20 relative overflow-hidden"
-  style={{
-    background: "linear-gradient(to bottom right, #31326F, #b9c7e8)",
-  }}
->
-
+    <section
+      className="py-20 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(to bottom right, #31326F, #A8FBD3)",
+      }}
+    >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black/10"></div>
       <div className="absolute top-0 left-0 w-full h-full">
@@ -80,7 +108,9 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-lg font-semibold leading-relaxed">
-                    1G Trần Quang Diệu, Ô Chợ Dừa, Đống Đa, Hà Nội
+                    1G Trần Quang Diệu, Ô Chợ Dừa, Đống Đa,
+                    <br />
+                    Hà Nội
                   </p>
                 </div>
               </div>
@@ -100,7 +130,8 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   required
-                  className="w-full border-gray-300 focus:border-[#000072] focus:ring-[#000072] transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full border-gray-300 focus:border-[#3264C3] focus:ring-[#3264C3] transition-all duration-300"
                   placeholder="Nhập họ và tên của bạn"
                 />
               </div>
@@ -115,7 +146,8 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   required
-                  className="w-full border-gray-300 focus:border-[#000072] focus:ring-[#000072] transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full border-gray-300 focus:border-[#3264C3] focus:ring-[#3264C3] transition-all duration-300"
                   placeholder="Nhập email của bạn"
                 />
               </div>
@@ -130,7 +162,8 @@ export function ContactSection() {
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
                   required
-                  className="w-full border-gray-300 focus:border-[#000072] focus:ring-[#000072] transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full border-gray-300 focus:border-[#3264C3] focus:ring-[#3264C3] transition-all duration-300"
                   placeholder="Nhập số điện thoại"
                 />
               </div>
@@ -144,16 +177,18 @@ export function ContactSection() {
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   rows={4}
-                  className="w-full border-gray-300 focus:border-[#000072] focus:ring-[#000072] transition-all duration-300 resize-none"
+                  disabled={isSubmitting}
+                  className="w-full border-gray-300 focus:border-[#3264C3] focus:ring-[#3264C3] transition-all duration-300 resize-none"
                   placeholder="Nhập nội dung cần tư vấn..."
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-blue-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                disabled={isSubmitting}
+                className="w-full bg-blue-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                Gửi đăng ký
+                {isSubmitting ? "Đang gửi..." : "Gửi đăng ký"}
               </Button>
             </form>
           </div>
